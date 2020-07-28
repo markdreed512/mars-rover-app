@@ -1,16 +1,23 @@
 import React from 'react'
-import styled from 'styled-components'
+// import styled from 'styled-components'
+import './Pics.css'
 
-const StyledButton = styled.button`
-
-`
 
 function Button(props) {
+    const buttonStyle = {
+        padding: "10px",
+        margin: "20px 4px",
+        border: "none"
+    }
     return (
-        <StyledButton id={props.id}onClick={props.handleClick}
+        <button
+            id={props.id}
+            onClick={props.handleClick}
+            style={buttonStyle}
+            className={props.selected}
         >
             {props.text}
-        </StyledButton>
+        </button>
     )
 }
 
